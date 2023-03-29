@@ -1,5 +1,7 @@
 export const Header = () => {
   return (
-    <div>Header</div>
-  )
-}
+    <div>
+      <h1>IP Detector</h1>
+    </div>
+  );
+};
