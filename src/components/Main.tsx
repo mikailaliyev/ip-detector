@@ -26,5 +26,10 @@ export const Main = () => {
     }    
     setData(JSON.parse(getData))
   }, []);
-  return <div className="main-content">{data.city}</div>;
+  return <div className="main-content">
+    <h1>Your ip: {data.ip}</h1>
+    <h2>IP version: {data.version}</h2>
+    <h2>Provider: {data.org}</h2>
+    <h2>Location: {data.city}, {data.country_name}</h2>
+    </div>;
 };
