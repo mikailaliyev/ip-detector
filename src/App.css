@@ -63,3 +63,12 @@ body {
   filter: invert(100%);
   width: 5rem;
 }
+
+.dark ::selection {
+  color: black;
+  background: white;
+}
+::selection {
+  color: white;
+  background: black;
+}
