@@ -14,7 +14,7 @@ export const Main = () => {
       sessionStorage.setItem("true", JSON.stringify(result));
     } catch (error) {
       console.log(error);
-      alert("Turn off AdBlock to use the site\nthere is no adds here ☺");
+      alert("We have some error with data fetching.\nAn ad blocker might cause it, so you may want to turn it off");
     }
   };
 
