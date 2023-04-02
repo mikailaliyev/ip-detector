@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Main = () => {
   const [data, setData] = useState<any>({});
-  const getData:any = sessionStorage.getItem("true")
-  console.log(JSON.parse(getData))
+  const navigate = useNavigate()
+  const getData: any = sessionStorage.getItem("true");
+  console.log(JSON.parse(getData));
 
   const handleData = async () => {
     try {
@@ -14,7 +16,7 @@ export const Main = () => {
       sessionStorage.setItem("true", JSON.stringify(result));
     } catch (error) {
       console.log(error);
-      alert("We have some error with data fetching.\nAn ad blocker might cause it, so you may want to turn it off");
+      navigate("/error")
     }
   };
 

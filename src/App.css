@@ -73,3 +73,13 @@ body {
   color: white;
   background: black;
 }
+
+.error-page {
+  font-size: 2rem;
+  margin-top: 15%;
+}
+
+.error-page a {
+  text-decoration: none;
+  color: red;
+}
