@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export const Main = () => {
   const [data, setData] = useState<any>({});
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const getData: any = sessionStorage.getItem("true");
   console.log(JSON.parse(getData));
 
@@ -16,7 +16,7 @@ export const Main = () => {
       sessionStorage.setItem("true", JSON.stringify(result));
     } catch (error) {
       console.log(error);
-      navigate("/error")
+      navigate("/error");
     }
   };
 
@@ -34,7 +34,7 @@ export const Main = () => {
       <h2>IP version: {data.version}</h2>
       <h2>Provider: {data.org}</h2>
       <h2>
-        Location: {data.city}, {data.country_name}
+        Location: {data.city ? data.city + ", " : ""} {data.country_name}
       </h2>
     </div>
   );
