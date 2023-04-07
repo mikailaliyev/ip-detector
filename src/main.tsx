@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>
     <Routes>
       <Route path="/*" element={<App />} />
-      <Route path="/error" element={<Error />} />
+      {!sessionStorage.getItem("true") && <Route path="/error" element={<Error />} />}
     </Routes>
   </BrowserRouter>
 );
